@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate, NavLink } from 'react-router-dom';
 import axios from 'axios';
 import Cookies from 'js-cookie';
 
@@ -68,8 +68,8 @@ const Dashboard = () => {
             <div className="card-body">
               SELAMAT DATANG <strong className="text-uppercase">{user.name}</strong>
               <ul>
-                <li><Link to='about'>About</Link></li>
-                <li><Link to='contact'>Contact</Link></li>
+                <li><NavLink to='/about'>About</NavLink></li>
+                <li><NavLink to='/contact'>Contact</NavLink></li>
               </ul>
               <hr />
               <button onClick={logoutHandler} className="btn btn-md btn-danger">LOGOUT</button>
